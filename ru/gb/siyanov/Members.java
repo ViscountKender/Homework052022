@@ -1,5 +1,7 @@
 package ru.gb.siyanov;
-public class Members  {
+public class Members<imt> implements Characteristics {
+    int height;
+    int lenght;
 
 
     public Members(Cat cat) {
@@ -28,95 +30,70 @@ public class Members  {
         arrayMembers[2] = new Members(human);
         arrayMembers[3] = new Members(human1);
         arrayMembers[4] = new Members(robot);
-        arrayMembers[5] = new Members(robot);
+        arrayMembers[5] = new Members(robot1);
+        for (int i = 0; i < arrayMembers.length; i++) {
+            run(arrayMembers[i].);
 
-
-
-
-
-
+        }
 
 
     }
 
-//    private String name;
-//    private int maxJump;
-//    private int maxRun;
-//    private Cat cat;
-//    private Robot robot;
-//    private Human human;
 
 
-//            {   name = "";
-//                cat = new Cat();
-//                System.out.println("Создан экземпляр класса Cat");
-//
-//
-//
-//              }
+
+    @Override
+    public void jump(int maxJump) {
+        String name = "";
 
 
-     static class  Cat  implements Characteristics {
+
+
+        System.out.println(name + " прыгнул " );
+
+    }
+
+    @Override
+    public void run(int maxRun) {
+        String name = "";
+
+
+
+        System.out.println(name + " пробежал " );
+
+    }
+}
+
+
+
+
+      class  Cat   {
          public Cat(String name, int maxJump, int maxRun) {
              this.name = name;
          }
 
          private String name;
 
-         @Override
-        public void jump(int height) {
-            System.out.println("Кошка " + name + " прыгнула ");
 
-        }
-
-        @Override
-        public void run(int length) {
-            System.out.println("Кошка " + name + "пробежала");
-
-        }
     }
 
-    static class Robot implements Characteristics {
+     class Robot  {
 
         public Robot(String name, int maxJump, int maxRun) {
             this.name = name;
         }
         private String name;
 
-        @Override
-        public void jump(int height) {
-            System.out.println("Человек " + name + " прыгнул ");
-
         }
 
-        @Override
-        public void run(int length) {
-            System.out.println("Человек " + name + "пробежал");
-
-        }
-
-
-
-    }
-
-    static class Human implements Characteristics {
+     class Human   {
          Human(String name, int maxJump, int maxRun) {
             this.name = name;
          }
 
         private String name;
 
-        @Override
-        public void jump(int height) {
-            System.out.println("Человек " + name + " прыгнул ");
 
-        }
-
-        @Override
-        public void run(int length) {
-            System.out.println("Человек " + name + "пробежал");
-
-        }
     }
-}
+
 

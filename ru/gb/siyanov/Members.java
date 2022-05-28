@@ -1,7 +1,8 @@
 package ru.gb.siyanov;
-public class Members<imt> implements Characteristics {
+public class Members implements Characteristics {
     int height;
     int lenght;
+    int max;
 
 
     public Members(Cat cat) {
@@ -24,6 +25,7 @@ public class Members<imt> implements Characteristics {
         Robot robot = new Robot("Zeleboba",8,20);
         Robot robot1 = new Robot("Bochka",6,22);
 
+
         Members [] arrayMembers = new Members[6];
         arrayMembers[0] = new Members(cat);
         arrayMembers[1] = new Members(cat1);
@@ -31,18 +33,14 @@ public class Members<imt> implements Characteristics {
         arrayMembers[3] = new Members(human1);
         arrayMembers[4] = new Members(robot);
         arrayMembers[5] = new Members(robot1);
-        for (int i = 0; i < arrayMembers.length; i++) {
-            run(arrayMembers[i].);
+
+
+
 
         }
 
 
-    }
-
-
-
-
-    @Override
+        @Override
     public void jump(int maxJump) {
         String name = "";
 
@@ -65,33 +63,43 @@ public class Members<imt> implements Characteristics {
 }
 
 
-
-
       class  Cat   {
-         public Cat(String name, int maxJump, int maxRun) {
+          private String name;
+          private int maxJump;
+          private int maxRun;
+
+          public Cat(String name, int maxJump, int maxRun) {
+              this.name = name;
+              this.maxJump = maxJump;
+              this.maxRun = maxRun;
+          }
+
+
+      }
+
+     class Robot  {
+         public Robot(String name, int maxJump, int maxRun) {
              this.name = name;
+             this.maxJump = maxJump;
+             this.maxRun = maxRun;
          }
 
          private String name;
-
-
-    }
-
-     class Robot  {
-
-        public Robot(String name, int maxJump, int maxRun) {
-            this.name = name;
-        }
-        private String name;
+         private int maxJump;
+         private int maxRun;
 
         }
 
      class Human   {
-         Human(String name, int maxJump, int maxRun) {
-            this.name = name;
+         public Human(String name, int maxJump, int maxRun) {
+             this.maxJump = maxJump;
+             this.maxRun = maxRun;
+             this.name = name;
          }
 
-        private String name;
+         private String name;
+         private int maxJump;
+         private int maxRun;
 
 
     }
